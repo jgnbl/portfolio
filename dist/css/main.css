@@ -24,6 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -90,37 +91,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%); }
-    .menu-branding .portrait {
-      background: url(../dist/img/gregnoble.png);
-      width: 150px;
-      height: 150px; } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
-
 * {
   box-sizing: border-box; }
 
@@ -132,7 +102,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2700&q=80");
+    background: url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -267,6 +237,14 @@ main {
   color: #fff;
   height: 60px; }
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -288,12 +266,24 @@ main {
     font-size: 24px; }
   .menu-branding {
     height: 25vh;
-    transform: translate3d(100%); }
+    transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url(../dist/img/gregnoble.png);
+      background: url("https://media-exp1.licdn.com/dms/image/C4D03AQF8Kb2NFWt3gw/profile-displayphoto-shrink_400_400/0/1591446536145?e=1612396800&v=beta&t=ly4t33aEoCB8Oi7nIxV6jRhKKLVJZySXu5TZyzuPH04");
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .projects {
+    grid-template-columns: 1fr; } }

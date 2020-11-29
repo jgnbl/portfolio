@@ -1,7 +1,7 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2700&q=80");
+$home-image: url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80");
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -57,7 +57,7 @@ $background-opacity: 0.9;
   }
 }
 
-@mixin mediaXL {
+@mixin mediaXl {
   @media screen and (min-width: 1171px) {
     @content;
   }

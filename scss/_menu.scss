@@ -43,6 +43,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -70,7 +71,7 @@
     @include easeOut;
 
     &.show {
-      // Slide in from top using translate 3d
+      // Slide in from top
       transform: translate3d(0, 0, 0);
     }
   }
